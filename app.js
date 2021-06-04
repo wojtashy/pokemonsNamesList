@@ -154,7 +154,7 @@ function remove_favourite() {
  function favourite_list_id_update(){
     let favourite_items = document.querySelectorAll(".favourite p");
 
-    for(var i=1;i<=favourite_items.length;i++){
+    for(var i=1;i<=favourite_items.length-1;i++){
         favourite_items[i].setAttribute("onclick", `showMore(${i+1})`);
     }
  }
