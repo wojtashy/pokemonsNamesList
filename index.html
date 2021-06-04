@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <button onclick="render_favourite_list()">Ulubione</button>
+        </nav>
+        <select id="namesList" onchange="showMore(false)">
+        </select>
+        <span id="listNav"></span>
+        <!-- <button onclick="showMore(false)" id="showMoreBTN">Pokaż więcej</button> -->
+
+    </div>
+    <div class="about">
+        <div id="name">
+            
+            <img src="./resources/heart.svg" id="favIcon" onclick="add_favouritve()" alt="img not found.">
+        <img src="./resources/heart_filled.svg" id="unFavIcon" onclick="remove_favourite()" alt="img not found">
+        <p id="nameLabel"> Brak danych</p>
+        </div>
+        
+        <p id="baseHp">Zdrowie:</p>
+
+        <p id="attack">Atak: </p>
+        <p id="defense">Obrona: </p>
+        <p id="specialAttack">Atak specjalny: </p>
+        <p id="specialDefense">Obrona specjalna: </p>
+        <p id="speed">Prędkość: </p>
+        <p id="abilities">Liczba umiejętności: </p>
+        <p id="baseXp">Bazowe doświadczenie: </p>
+        <p id="height">Wzrost: </p>
+        <p id="weight">Waga: </p>
+        <p id="moves">Dostępne ruchy: </p>
+        <p id="items">Dostępne przedmioty: </p>
+        <p id="baseHpData" class="data"></p>
+        <p id="attackData" class="data"></p>
+        <p id="defenseData" class="data"></p>
+        <p id="specialAttackData" class="data"></p>
+        <p id="specialDefenseData" class="data"> </p>
+        <p id="speedData" class="data"></p>
+        <p id="abilitiesData" class="data"></p>
+        <p id="baseXpData" class="data"></p>
+        <p id="heightData" class="data"></p>
+        <p id="weightData" class="data"></p>
+        <p id="movesData" class="data"></p>
+        <p id="itemsData" class="data"></p>
+
+        <!-- <div id="icons">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+    </div>
+    <div class="loading"></div>
+    <div class="favourite">
+        <p></p>
+        <span style="height: 5vh;"></span>
+    </div>
+</body>
+
+</html>
