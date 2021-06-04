@@ -139,6 +139,7 @@ function add_favouritve() {
     document.getElementById("unFavIcon").style.display = "block";
     document.getElementById("favIcon").style.display = "none";
     render_favourite_item(name);
+    favourite_list_id_update();
 }
 
 function remove_favourite() {
@@ -153,7 +154,7 @@ function remove_favourite() {
  function favourite_list_id_update(){
     let favourite_items = document.querySelectorAll(".favourite p");
 
-    for(var i=1;i<=favourite_items.length-1;i++){
+    for(var i=1;i<=favourite_items.length;i++){
         favourite_items[i].setAttribute("onclick", `showMore(${i+1})`);
     }
  }
